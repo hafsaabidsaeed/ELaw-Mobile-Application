@@ -60,7 +60,13 @@ class BoardingScreen1 extends StatelessWidget {
                     ),
                     SizedBox(height: screenHeight * 0.03),
                     OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (BuildContext context){
+                            return const BoardingScreen_2();
+                          }
+                        ));
+                      },
                       style: OutlinedButton.styleFrom(
                         padding: EdgeInsets.all(screenWidth * 0.02),
                         fixedSize: Size(buttonWidth, buttonHeight),
