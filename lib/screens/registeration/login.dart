@@ -15,6 +15,7 @@ class _LoginState extends State<Login> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  bool _isObscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +48,18 @@ class _LoginState extends State<Login> {
                     "Email",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
                   ),
+                  SizedBox(height: screenHeight* 0.005,),
                   TextFormField(
                     controller: _emailController,
-                    obscureText: true,
+                    obscureText: false,
                     keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
                     decoration: InputDecoration(
+                      hintText: "Enter your email",
+                      prefixIcon: const Padding(
+                        padding: EdgeInsets.only(right: 20.0, left: 20),
+                        child: Icon(Icons.person),
+                      ),
                       border: const OutlineInputBorder(),
                       filled: true,
                       fillColor: Colors.grey[200],
@@ -63,17 +71,33 @@ class _LoginState extends State<Login> {
                       return null;
                     },
                   ),
-                  const SizedBox(height: 10),
+                  SizedBox(height: screenHeight* 0.02,),
                   const Text(
                     "Password",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
                   ),
+                  SizedBox(height: screenHeight* 0.005,),
                   TextFormField(
                     controller: _passwordController,
-                    obscureText: true,
+                    obscureText: _isObscurePassword,
                     decoration: InputDecoration(
+                      hintText: "Enter your password",
                       border: const OutlineInputBorder(),
-                      suffixIcon: const Icon(Icons.visibility),
+                      prefixIcon: const Padding(
+                      padding: EdgeInsets.only(right: 20.0, left: 20),
+                      child: Icon(Icons.lock),
+                    ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _isObscurePassword ? Icons.remove_red_eye : Icons.visibility_off,
+                          color: Colors.grey,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _isObscurePassword = !_isObscurePassword;
+                          });
+                        },
+                      ),
                       filled: true,
                       fillColor: Colors.grey[200],
                     ),
@@ -107,7 +131,6 @@ class _LoginState extends State<Login> {
                   ),
                   foregroundColor: Colors.black,
                   backgroundColor: Colors.blue[100],
-                  side: const BorderSide(color: Colors.blueAccent, width: 2),
                   shape: const StadiumBorder(),
                 ),
                 child: const Text("Login"),
