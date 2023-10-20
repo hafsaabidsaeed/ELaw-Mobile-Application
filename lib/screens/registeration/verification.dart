@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
-import 'home_screen.dart';
+import '../home/home_screen.dart';
 
 class Verification extends StatelessWidget{
   const Verification({super.key});

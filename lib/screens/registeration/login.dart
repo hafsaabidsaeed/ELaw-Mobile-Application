@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:project/constants/signup.dart';
+import 'package:project/screens/registeration/signup.dart';
 
-import 'home_screen.dart';
+import '../home/home_screen.dart';
 
 class Login extends StatefulWidget {
+  // ignore: use_key_in_widget_constructors
   const Login({Key? key});
 
   @override

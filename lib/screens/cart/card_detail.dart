@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/constants/chat_room.dart';
+import 'package:project/screens/chat%20room/chat_room.dart';
 
 class DetailPage extends StatefulWidget {
   final String imagePath;
@@ -270,10 +270,10 @@ class _DetailPageState extends State<DetailPage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => ChatRoom()),
+            MaterialPageRoute(builder: (context) => const ChatRoom()),
           );
         },
-        child: Icon(Icons.chat),
+        child: const Icon(Icons.chat),
       ),
     );
   }

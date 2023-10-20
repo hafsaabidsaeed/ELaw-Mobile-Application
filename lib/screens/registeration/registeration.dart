@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/constants/verification.dart';
+import 'package:project/screens/registeration/verification.dart';
 
 class Registration extends StatelessWidget{
   const Registration({super.key});
@@ -33,7 +33,7 @@ class Registration extends StatelessWidget{
                     filled: true,
                     fillColor: Colors.grey[200],
                     hintText: "+92",
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                         fontSize:20.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,

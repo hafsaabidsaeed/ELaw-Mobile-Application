@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ChatRoom extends StatefulWidget {
+  const ChatRoom({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _ChatRoomState createState() => _ChatRoomState();
 }
 
 class _ChatRoomState extends State<ChatRoom> {
   final List<String> messages = []; // List to store messages
 
-  TextEditingController _messageController = TextEditingController();
+  final TextEditingController _messageController = TextEditingController();
 
   void _sendMessage(String message) {
     setState(() {
@@ -21,7 +24,7 @@ class _ChatRoomState extends State<ChatRoom> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chat Room', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+        title: const Text('Chat Room', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
         backgroundColor: Colors.blue[100],
       ),
       body: Column(
@@ -36,7 +39,7 @@ class _ChatRoomState extends State<ChatRoom> {
               },
             ),
           ),
-          Divider(height: 1),
+          const Divider(height: 1),
           Container(
             color: Theme.of(context).cardColor,
             child: _buildMessageComposer(),
@@ -51,20 +54,20 @@ class _ChatRoomState extends State<ChatRoom> {
     return IconTheme(
       data: IconThemeData(color: Colors.blue[100]),
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 8.0),
+        margin: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
           children: <Widget>[
             Expanded(
               child: TextField(
                 controller: _messageController,
                 onSubmitted: _sendMessage,
-                decoration: InputDecoration.collapsed(
+                decoration: const InputDecoration.collapsed(
                   hintText: 'Send a message',
                 ),
               ),
             ),
             IconButton(
-              icon: Icon(Icons.send),
+              icon: const Icon(Icons.send),
               onPressed: () => _sendMessage(_messageController.text),
             ),
           ],

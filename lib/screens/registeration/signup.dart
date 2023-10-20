@@ -1,6 +1,6 @@
-import 'package:project/constants/registeration.dart';
+import 'package:project/screens/registeration/registeration.dart';
 import 'package:flutter/material.dart';
-import 'package:project/constants/login.dart';
+import 'package:project/screens/registeration/login.dart';
 
 class SignUp extends StatelessWidget{
   const SignUp({super.key});
@@ -20,6 +20,7 @@ class SignUp extends StatelessWidget{
         body: SingleChildScrollView(
             key: formKey,
             child: Container(
+              // ignore: prefer_const_constructors
               padding: EdgeInsets.all(25),
               child: Column(
                   children: [
@@ -170,7 +171,7 @@ class SignUp extends StatelessWidget{
                           width: screenWidth * 0.15,
                           height: screenWidth * 0.15,
                         ),
-                        SizedBox(width: 30),
+                        const SizedBox(width: 30),
                         Image.asset(
                           'assets/gmail.png',
                           width: screenWidth * 0.15,

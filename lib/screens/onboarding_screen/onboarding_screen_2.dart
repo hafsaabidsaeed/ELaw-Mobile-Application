@@ -1,8 +1,8 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:project/constants/login.dart';
-import 'package:project/constants/signup.dart';
+import 'package:project/screens/registeration/login.dart';
+import 'package:project/screens/registeration/signup.dart';
 
 // ignore: camel_case_types
 class BoardingScreen_2 extends StatelessWidget {

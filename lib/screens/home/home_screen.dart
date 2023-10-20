@@ -1,7 +1,7 @@
-import 'package:project/constants/filter_drawer.dart';
+import 'package:project/screens/widgets/filter_drawer.dart';
 import 'package:flutter/material.dart';
-import 'card.dart' show PropertyCard;
-import 'chat_room.dart';
+import '../cart/card.dart' show PropertyCard;
+import '../chat room/chat_room.dart';
 
 class HomeScreen extends StatefulWidget{
   const HomeScreen({super.key});
@@ -40,7 +40,7 @@ class HomeScreenState extends State<HomeScreen> {
            onPressed: () {
              Navigator.push(
                context,
-               MaterialPageRoute(builder: (context) => ChatRoom()), // Navigate to the Chat Room screen
+               MaterialPageRoute(builder: (context) => const ChatRoom()), // Navigate to the Chat Room screen
              );
            },
          ),

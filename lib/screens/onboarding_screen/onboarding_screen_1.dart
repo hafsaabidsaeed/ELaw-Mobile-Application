@@ -21,6 +21,7 @@ class BoardingScreen1 extends StatelessWidget {
         child: Container(
           height: screenHeight,
           width: screenWidth,
+
           color: Colors.blueAccent[100],
           padding: EdgeInsets.all(screenWidth * 0.1),
           child: Column(

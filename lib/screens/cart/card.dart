@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/constants/card_detail.dart';
+import 'package:project/screens/cart/card_detail.dart';
 
 class PropertyCard extends StatelessWidget {
   final String imagePath;
@@ -60,17 +60,17 @@ class PropertyCard extends StatelessWidget {
                   children: [
                     Text(
                       name,
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 5),
+                    const SizedBox(height: 5),
                     Text(
                       location,
-                      style: TextStyle(fontSize: 16, color: Colors.grey),
+                      style: const TextStyle(fontSize: 16, color: Colors.grey),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text(
                       description,
-                      style: TextStyle(fontSize: 16),
+                      style: const TextStyle(fontSize: 16),
                     ),
                   ],
                 ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
   @override
+  // ignore: library_private_types_in_public_api
   _DrawerWidgetState createState() => _DrawerWidgetState();
 }
 
