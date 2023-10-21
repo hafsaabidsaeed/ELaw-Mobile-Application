@@ -7,7 +7,7 @@ void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     routes: {
-      "/splash": (context)=> const Splash(),
+      "/": (context)=> const Splash(),
       "/onboarding_screen_1": (context) => const BoardingScreen1()
     },
   ));
