@@ -16,8 +16,13 @@ class Registration extends StatelessWidget{
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  'assets/verify.png',
+                Container(
+                  color: Colors.yellow,
+                  child: Image.asset(
+                    'assets/verify.png',
+                    width: screenWidth ,
+                    height: screenHeight * 0.4,
+                  ),
                 ),
                 Text("Registration", style: TextStyle(fontWeight: FontWeight.bold, fontSize: screenWidth * 0.1),),
                 const SizedBox(height: 10,),

@@ -38,7 +38,7 @@ class _LoginState extends State<Login> {
               Image.asset(
                 'assets/login_img.png',
                 width: screenWidth ,
-                height: screenHeight * 0.4, // Set height based on screen height
+                height: screenHeight * 0.4,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
