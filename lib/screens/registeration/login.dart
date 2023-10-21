@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/screens/registeration/signup.dart';
+import 'package:project/screens/registeration/registeration.dart';
 
 import '../home/home_screen.dart';
 
@@ -149,7 +149,7 @@ class _LoginState extends State<Login> {
                         context,
                         MaterialPageRoute(
                           builder: (BuildContext context) {
-                            return const SignUp();
+                            return const Registration();
                           },
                         ),
                       );

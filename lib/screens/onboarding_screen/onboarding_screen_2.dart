@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:project/screens/registeration/login.dart';
-import 'package:project/screens/registeration/signup.dart';
+import 'package:project/screens/registeration/registeration.dart';
 
 // ignore: camel_case_types
 class BoardingScreen_2 extends StatelessWidget {
@@ -55,7 +55,7 @@ class BoardingScreen_2 extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (BuildContext context) {
-                      return const SignUp();
+                      return const Registration();
                     }),
                   );
                 },
@@ -74,7 +74,6 @@ class BoardingScreen_2 extends StatelessWidget {
               ),
               SizedBox(height: screenHeight * 0.05),
               SizedBox(
-                // height: screenHeight * 0.5,
                 width: screenWidth,
                 child: Image.asset(
                   './assets/celebrate_law.png',
@@ -82,7 +81,6 @@ class BoardingScreen_2 extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                 ),
               ),
-
             ],
           ),
         ),
