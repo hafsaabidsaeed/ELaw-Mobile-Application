@@ -2,18 +2,26 @@ import 'package:project/screens/registeration/registeration.dart';
 import 'package:flutter/material.dart';
 import 'package:project/screens/registeration/login.dart';
 
-class SignUp extends StatelessWidget {
+class SignUp extends StatefulWidget {
   const SignUp({super.key});
 
   @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  @override
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController phoneNumberController = TextEditingController();
+  bool _isObscurePassword = true;
+
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
-    final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
-    TextEditingController phoneNumberController = TextEditingController();
+
 
     return Scaffold(
         body: SingleChildScrollView(
@@ -97,14 +105,26 @@ class SignUp extends StatelessWidget {
                           ),
                           TextFormField(
                             controller: passwordController,
-                            obscureText: true,
+                            obscureText: _isObscurePassword,
                             keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
                               border: const OutlineInputBorder(),
-                              suffixIcon: const Icon(Icons.visibility),
+                              suffixIcon: IconButton(
+                                icon: Icon(
+                                  _isObscurePassword ? Icons.remove_red_eye : Icons.visibility_off,
+                                   color: Colors.grey,
+                                ),
+                                onPressed: () {
+                                  setState(() {
+                                    _isObscurePassword = !_isObscurePassword;
+                                  });
+                                },
+                              ),
                               filled: true,
                               fillColor: Colors.grey[200],
+
                             ),
+
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Please enter your email address';
