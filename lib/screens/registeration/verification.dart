@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:project/screens/registeration/signup.dart';
 
-import '../home/home_screen.dart';
-
 class Verification extends StatelessWidget {
   const Verification({super.key});
 
@@ -13,7 +11,7 @@ class Verification extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
 
     final defaultPinTheme = PinTheme(
-        width: screenWidth * 0.14, // Adjust width based on screen width
+        width: screenWidth * 0.14,
         height: screenHeight * 0.081,
         textStyle: const TextStyle(fontSize: 22, color: Colors.black),
         decoration: BoxDecoration(
@@ -86,7 +84,7 @@ class Verification extends StatelessWidget {
                       foregroundColor: Colors.black,
                       backgroundColor: Colors.blue[100],
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0), // Adjust the value as needed
+                        borderRadius: BorderRadius.circular(10.0),
                       ),
                     ),
                     child: const Text("Verify"),

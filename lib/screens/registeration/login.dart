@@ -71,7 +71,7 @@ class _LoginState extends State<Login> {
                       return null;
                     },
                   ),
-                  SizedBox(height: screenHeight* 0.02,),
+                  SizedBox(height: screenHeight* 0.01,),
                   const Text(
                     "Password",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
@@ -123,15 +123,17 @@ class _LoginState extends State<Login> {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.all(screenWidth * 0.02),
-                  fixedSize: Size(screenWidth * 0.7, screenWidth * 0.15),
+                  padding: EdgeInsets.symmetric(vertical: screenWidth * 0.02),
+                  fixedSize: Size(screenWidth * 0.5, screenWidth * 0.15),
                   textStyle: TextStyle(
                     fontSize: screenWidth * 0.058,
                     fontWeight: FontWeight.bold,
                   ),
                   foregroundColor: Colors.black,
                   backgroundColor: Colors.blue[100],
-                  shape: const StadiumBorder(),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0), // Adjust the value as needed
+                  ),
                 ),
                 child: const Text("Login"),
               ),
