@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:project/screens/registeration/verification.dart';
 
 class Registration extends StatelessWidget {
@@ -63,7 +64,11 @@ class Registration extends StatelessWidget {
                         const SizedBox(width: 16), // Add some spacing between the label and the input field
                         Expanded(
                           child: TextFormField(
-                            keyboardType: TextInputType.phone, // Use TextInputType.phone to allow only digits
+                            keyboardType: TextInputType.phone,
+                            inputFormatters: <TextInputFormatter>[
+                              LengthLimitingTextInputFormatter(10), // Allowing only 10 characters
+                              FilteringTextInputFormatter.digitsOnly, // Allowing only digits
+                            ],
                             decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10.0),
@@ -78,6 +83,7 @@ class Registration extends StatelessWidget {
                             ),
                           ),
                         ),
+
                       ],
                     ),
                   ],

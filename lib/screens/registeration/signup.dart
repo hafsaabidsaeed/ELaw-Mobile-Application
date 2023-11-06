@@ -52,7 +52,7 @@ class _SignUpState extends State<SignUp> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Phone Number",
+                            "Username",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: screenWidth * 0.05),
@@ -104,7 +104,7 @@ class _SignUpState extends State<SignUp> {
                                 fontSize: screenWidth * 0.05),
                           ),
                           TextFormField(
-                            controller: passwordController,
+                            // controller: passwordController,
                             obscureText: _isObscurePassword,
                             keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
@@ -127,7 +127,7 @@ class _SignUpState extends State<SignUp> {
 
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Please enter your email address';
+                                return 'Please enter your password';
                               }
                               return null;
                             },
@@ -140,7 +140,7 @@ class _SignUpState extends State<SignUp> {
                                 fontSize: screenWidth * 0.05),
                           ),
                           TextFormField(
-                            controller: passwordController,
+                            // controller: passwordController,
                             obscureText: true,
                             decoration: InputDecoration(
                               border: const OutlineInputBorder(),
@@ -150,7 +150,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Please enter your password';
+                                return 'Please confirm your password';
                               }
                               return null;
                             },
