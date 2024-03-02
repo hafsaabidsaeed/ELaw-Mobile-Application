@@ -150,7 +150,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Please confirm your password';
+                                return 'Please confirm  password';
                               }
                               return null;
                             },
