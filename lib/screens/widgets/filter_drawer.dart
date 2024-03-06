@@ -8,7 +8,7 @@ class DrawerWidget extends StatefulWidget {
 }
 
 class _DrawerWidgetState extends State<DrawerWidget> {
-  List<String> areas = ['Lahore', ' Karachi', 'Islamabad','Sialkot', 'Okara','Multan'];
+  List<String> areas = ['Lahore', ' Karachi', 'Islamabad','Sahiwal', 'Topi','Multan'];
   List<String> qualificationList = [
     'Bachelors of Law-LLB',
     'Master of Legal Studies-MLS',
