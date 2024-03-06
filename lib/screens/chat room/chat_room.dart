@@ -24,22 +24,32 @@ class _ChatRoomState extends State<ChatRoom> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Chat Room', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+        title: const Text(
+          'Chat Room',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        ),
         backgroundColor: Colors.blue[100],
       ),
       body: Column(
         children: <Widget>[
           Expanded(
-            child: ListView.builder(
-              itemCount: messages.length,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(messages[index]),
-                );
-              },
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: messages.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text(messages[index]),
+                      );
+                    },
+                  ),
+                  const Divider(height: 1),
+                ],
+              ),
             ),
           ),
-          const Divider(height: 1),
           Container(
             color: Theme.of(context).cardColor,
             child: _buildMessageComposer(),
@@ -48,7 +58,6 @@ class _ChatRoomState extends State<ChatRoom> {
       ),
     );
   }
-
 
   Widget _buildMessageComposer() {
     return IconTheme(
