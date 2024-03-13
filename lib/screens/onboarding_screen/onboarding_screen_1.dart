@@ -30,7 +30,7 @@ class BoardingScreen1 extends StatelessWidget {
               Image.asset("assets/elaw.png", width: imageWidth),
               SizedBox(height: screenHeight * 0.02),
               Text(
-                "We provide you with the information of highly experienced Lawyers from all over Pakistan.",
+                "We provide you with the information ",
                 style: TextStyle(color: Colors.white, fontSize: textSize),
                 textAlign: TextAlign.center,
               ),
